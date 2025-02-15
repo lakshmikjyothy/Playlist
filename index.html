@@ -153,6 +153,24 @@
     </div>
 
     <script>
+        
+      function applyTheme() {
+        const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (isDarkMode) {
+            document.body.style.background = "linear-gradient(#3a3a3a, #1e1e1e)"; // Dark grey gradient
+            document.body.style.color = "#f1aebf"; // Soft pink text
+        } else {
+            document.body.style.background = "linear-gradient(#ee9fab, #f1aebf)"; // Light pink gradient
+            document.body.style.color = "white";
+        }
+      }
+
+    // Run on page load
+    applyTheme();
+
+    // Detect theme changes dynamically
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", applyTheme);
+        
         // Generate Balloons
         for (let i = 0; i < 10; i++) {
             let balloon = document.createElement("div");
