@@ -18,6 +18,15 @@
             margin-top: 5%;
         }
 
+                /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+           body {
+                 background: linear-gradient(#3a3a3a, #1e1e1e); /* Dark grey gradient */
+                 color: #f1aebf; /* Soft pink text */
+                }
+        }
+
+
         h1 {
             font-size: 3.4em;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
@@ -55,14 +64,6 @@
             margin-bottom: 10px;
             width: 100%;
             max-width: 300px;
-        }
-
-        /* Dark Mode */
-        @media (prefers-color-scheme: dark) {
-           body {
-                 background: linear-gradient(#3a3a3a, #1e1e1e); /* Dark grey gradient */
-                 color: #f1aebf; /* Soft pink text */
-                }
         }
 
         @media (max-width: 768px) {
